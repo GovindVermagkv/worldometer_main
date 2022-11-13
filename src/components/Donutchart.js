@@ -1,9 +1,78 @@
-import React from 'react'
+import React ,{useState, useEffect}from "react";
+import Chart from 'react-apexcharts';
 
-function Donutchart() {
-  return (
-    <div>Donutchart</div>
-  )
+function Donutchart()
+{
+    const [contryname, setCountryname]= useState([]);
+    const [medal, setMedal]= useState([]);
+
+    useEffect( ()=>{
+     const getdata= async()=>{
+          const countryname=[];
+          const getmedal=[];
+
+        const reqData= await fetch("https://raw.githubusercontent.com/Prakash-kumar1/JSON/main/testModel"); 
+        const resData= await reqData.json();
+        console.log(resData) ;
+        for(let i=0; i<resData.length; i++)
+        {
+            countryname.push(resData[i].country);
+            getmedal.push(parseInt(resData[i].medals));
+        }
+        setCountryname(countryname);
+        setMedal(getmedal);
+     
+
+     }
+     getdata();
+    },[]);
+
+    return(
+        <React.Fragment>
+            <div className='container-fluid mt-3 mb-3'>        
+            <h2 className="text-left">Donut Chart</h2>
+            <Chart 
+            type="donut"
+            width={1349}
+            height={ 550}
+            series={medal}
+
+            options={{
+             labels:contryname,
+             title:{
+                text:"Medal Country Name",
+               // align:"center",
+             },
+
+             plotOptions:{
+             pie:{
+                donut:{
+                    labels:{
+                        show:true,
+                        total:{
+                            show:true,
+                            showAlways:true,
+                             //formatter: () => '343',
+                            fontSize:30,
+                            color: '#f90000',
+                        }
+                    }
+                }
+             }
+
+             },
+
+             dataLabels:{
+                enabled:true,
+             }
+
+
+            }}
+            
+            />
+
+            </div>
+        </React.Fragment>
+    );
 }
-
-export default Donutchart
+export default Donutchart;
