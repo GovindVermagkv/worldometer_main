@@ -19,6 +19,9 @@
   height: 10%;
   border: 2px solid green;
 }
+#header_container>div{
+  text-align: center;
+}
 
 #main_container {
   width: 100%;
