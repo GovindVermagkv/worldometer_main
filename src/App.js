@@ -1,12 +1,15 @@
+import {React} from 'react';
+
+import Layout from './components/Layout';
 
 import './App.css';
 
-function App() {
+const App=()=> {
   return (
     <div className="App">
       <>
         <div>
-          <h1>worldometer dashboard</h1>
+         <Layout />
         </div>
       </>
     </div>
