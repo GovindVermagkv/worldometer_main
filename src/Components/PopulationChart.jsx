@@ -7,7 +7,7 @@ export default function Index() {
     const [data, setData] = useState("");
 
    useEffect(()=>{
-    let url = "https://dhis2-app-course.ifi.uio.no/api?page=2&pageSize=50"
+    let url = "https://dhis2-app-course.ifi.uio.no/api?page=2&pageSize=60"
     axios
     .get(url)
     .then((responce)=>{
@@ -17,20 +17,19 @@ export default function Index() {
     })
    },[])
 
-   console.log(data)
+//    console.log(data)
 
   const mystyle={
     margin:"auto",
     background:"#fff",
-    border:"1px solid black"
   }
     
   return (
     <div style={mystyle} >
-        <h1 style={{color:"gray"}}>World Population <strong style={{color:"#1e1e1e"}}>Chart</strong></h1>
+        <h1 style={{color:"gray", textAlign:"center"}}>World Population <strong style={{color:"#1e1e1e"}}>Chart</strong></h1>
           
         <BarChart width={1200} height={250} data={data}>
-          <CartesianGrid strokeDasharray="1 1" />
+          <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="Country" />
           <YAxis />
           <Tooltip />
