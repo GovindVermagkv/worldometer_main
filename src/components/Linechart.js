@@ -22,7 +22,7 @@ function Linechart()
     },[]);   
 
     return(<React.Fragment>
-        <div className='container-fluid mt-3 mb-3'>
+        <div>
           <h2>Line Chart- Using Apexcharts in React </h2>          
           <Chart type='line'
           width={1050}
