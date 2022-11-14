@@ -1,4 +1,4 @@
-import {React} from "react";
+import { React } from "react";
 
 import "../App.css";
 
@@ -7,9 +7,7 @@ const Header = () => {
         <>
             <div id='header_container'>
                 <div>
-                    <h1 style={{ "textAlign": "center" }}>
-                        Header
-                    </h1>
+                    <h1>Header</h1>
                 </div>
             </div>
         </>

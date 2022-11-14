@@ -9,7 +9,9 @@ const Main = () => {
         <>
             <div id='main_container'>
                 <div>
-                    <div id="dashboard"><h3>Dashboard</h3><p>PPG / Dashboard</p> </div>
+                    <div id="dashboard">
+                    <h3>Dashboard</h3><p>PPG / Dashboard</p> 
+                    </div>
 
                     <div id="main_super_div">
                         <div>1</div>
