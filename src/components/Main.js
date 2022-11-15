@@ -2,9 +2,9 @@ import {React} from "react";
 
 import Pollution from "./pollution";
 import PopulationChart from "./PopulationChart";
+import ExchangeRateChart from "./ExchangeRateChart";
 
 import "../App.css";
-import ExchangeRateChart from "./ExchangeRateChart";
 
 const Main = () => {
     return (
