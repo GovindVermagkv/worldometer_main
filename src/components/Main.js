@@ -23,14 +23,14 @@ const Main = () => {
                     </div>
 
                     <div id='static_revenue'>
-                        <div><ExchangeRateChart/></div>
+                        <div><PopulationChart /></div>
                         <div>6</div>
                     </div>
 
                     <div id="product_order_profile">
                         <div>7</div>
                         <div> <Pollution /></div>
-                        <div>9</div>
+                        <div></div>
                     </div>
 
                     <div id='static_revenue'>
