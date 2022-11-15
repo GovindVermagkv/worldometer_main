@@ -1,78 +1,66 @@
-import React ,{useState, useEffect}from "react";
-import Chart from 'react-apexcharts';
+import React, { useEffect, useState } from "react";
+import Chart from "react-apexcharts";
+import axios from "axios";
 
-function Donutchart()
-{
-    const [contryname, setCountryname]= useState([]);
-    const [medal, setMedal]= useState([]);
+export const Donutchart = () => {
+  const [mydata, setMydata] = useState([]);
 
-    useEffect( ()=>{
-     const getdata= async()=>{
-          const countryname=[];
-          const getmedal=[];
+  useEffect(() => {
+    axios
+      .get(
+        `https://raw.githubusercontent.com/Prakash-kumar1/JSON/main/testModel`
+      )
+      .then((response) => {
+        setMydata(response.data);
+      });
+  }, []);
 
-        const reqData= await fetch("https://raw.githubusercontent.com/Prakash-kumar1/JSON/main/testModel"); 
-        const resData= await reqData.json();
-        console.log(resData) ;
-        for(let i=0; i<resData.length; i++)
-        {
-            countryname.push(resData[i].country);
-            getmedal.push(parseInt(resData[i].medals));
-        }
-        setCountryname(countryname);
-        setMedal(getmedal);
-     
-
-     }
-     getdata();
-    },[]);
-
-    return(
-        <React.Fragment>
-            <div className='container-fluid mt-3 mb-3'>        
-            <h2 className="text-left">Donut Chart</h2>
-            <Chart 
-            type="donut"
-            width={1349}
-            height={ 550}
-            series={medal}
-
-            options={{
-             labels:contryname,
-             title:{
-                text:"Medal Country Name",
-               // align:"center",
-             },
-
-             plotOptions:{
-             pie:{
-                donut:{
-                    labels:{
-                        show:true,
-                        total:{
-                            show:true,
-                            showAlways:true,
-                             //formatter: () => '343',
-                            fontSize:30,
-                            color: '#f90000',
-                        }
-                    }
-                }
-             }
-
-             },
-
-             dataLabels:{
-                enabled:true,
-             }
+  const country = [];
+  const medal = [];
+  mydata.map((value) => {
+    console.log(value);
+    country.push(value.country);
+    medal.push(+value.medals);
+  });
 
 
-            }}
-            
-            />
+  return (
+    <div>
+      <h2>Donut Chart of Olympics</h2>
+      <Chart
+        type="donut"
+        width={430}
+        height={650}
+        series={medal}
+        options={{
+          labels: country,
+          title: {
+            text: "Medal Country Name",
+          },
 
-            </div>
-        </React.Fragment>
-    );
+          plotOptions: {
+            pie: {
+              donut: {
+                labels: {
+                  show: true,
+                  total: {
+                    show: true,
+                    showAlways: true,
+                    fontSize: 20,
+                    color: "#f90000",
+                  },
+                },
+              },
+            },
+          },
+
+          dataLabels: {
+            enabled: true,
+          },
+        }}
+      />
+    </div>
+  );
 }
-export default Donutchart;
+
+

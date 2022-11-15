@@ -1,13 +1,17 @@
-import Donutchart from "./components/Donutchart";
-import Linechart from "./components/Linechart";
+import {React} from 'react';
 
+import Layout from './components/Layout';
 
+import './App.css';
 
-function App() {
+const App=()=> {
   return (
-    <div>
-      <Donutchart />
-      <Linechart />
+    <div className="App">
+      <>
+        <div>
+         <Layout />
+        </div>
+      </>
     </div>
   );
 }

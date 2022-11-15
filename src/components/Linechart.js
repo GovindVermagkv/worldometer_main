@@ -1,49 +1,60 @@
-import React,{useState, useEffect} from 'react';
-import Chart from 'react-apexcharts';
+import React, { useState, useEffect } from "react";
+import Chart from "react-apexcharts";
+import axios from "axios";
 
-function Linechart()
-{
-    const [sData, setSdata]= useState([]);
-    useEffect( ()=>{
-        const getvaluedata= async()=>{
-            const newvalue=[];
-            const reqData= await fetch('https://raw.githubusercontent.com/Prakash-kumar1/JSON/main/product');
-            const resData= await reqData.json();
-            //console.log(resData);
-            for(let i=0; i < resData.length; i++)
-            {
-                newvalue.push({name:resData[i].category_title, data:resData[i].value });   
+export const Linechart = () => {
+  const [sData, setSdata] = useState([]);
 
-            }
-            setSdata(newvalue);
+  useEffect(() => {
+    axios
+      .get(`https://raw.githubusercontent.com/Prakash-kumar1/JSON/main/product`)
+      .then((response) => {
+        setSdata(response.data);
+      });
+  }, []);
 
-        }
-        getvaluedata();
-    },[]);   
+  const newArr = [];
+  sData.map((val) => {
+    const obj = {};
+    obj.name = val.category_title;
+    obj.data = val.value;
+    newArr.push(obj);
+  });
+  console.log(newArr);
 
-    return(<React.Fragment>
-        <div>
-          <h2>Line Chart- Using Apexcharts in React </h2>          
-          <Chart type='line'
-          width={1050}
-          height={550}
-          series={sData}
+  return (
+    <>
+      <div>
+        <h2>Line Chart- Using Apexcharts in React </h2>
+        <Chart
+          type="line"
+          width={550}
+          height={450}
+          series={newArr}
           options={{
-            title:{ text:"Product sell in 2021"},
-            xaxis:{
-                // title:{text:"Product Sell in Months"},
-                categories:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+            title: { text: "Product sell in 2021" },
+            xaxis: {
+              categories: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+              ],
             },
-            yaxis:{
-                title:{text:"Product in K"}                 
-            }          
-
-        }}
-          >
-          </Chart>
-
-        </div>
-    </React.Fragment>);
-}
-
-export default Linechart;
+            yaxis: {
+              title: { text: "Product in K" },
+            },
+          }}
+        ></Chart>
+      </div>
+    </>
+  );
+};
