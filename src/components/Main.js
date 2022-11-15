@@ -1,8 +1,10 @@
 import {React} from "react";
 
 import Pollution from "./pollution";
+import PopulationChart from "./PopulationChart";
 
 import "../App.css";
+import ExchangeRateChart from "./ExchangeRateChart";
 
 const Main = () => {
     return (
@@ -21,7 +23,7 @@ const Main = () => {
                     </div>
 
                     <div id='static_revenue'>
-                        <div>5 </div>
+                        <div><ExchangeRateChart/></div>
                         <div>6</div>
                     </div>
 

@@ -12,7 +12,6 @@ import {
 
 export default function ExchangeRateChart() {
   const [exchangeData, setExchangeData] = useState("");
-//   const [db,setdb] = useState();
 
 
   useEffect(() => {
@@ -31,8 +30,8 @@ export default function ExchangeRateChart() {
     temp.value = exchangeData[ele];
     newData.push(temp);
   });
-
-
+console.log("exchangeData=>>>",exchangeData)
+console.log("newData=>>>",newData)
 
   return (
     <>
@@ -55,7 +54,7 @@ export default function ExchangeRateChart() {
             </linearGradient>
           </defs>
           <XAxis dataKey="name" />
-          <YAxis />
+          <YAxis dataKey="value"/>
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
           <Area
