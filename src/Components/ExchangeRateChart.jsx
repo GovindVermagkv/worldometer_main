@@ -12,7 +12,6 @@ import {
 
 export default function ExchangeRateChart() {
   const [exchangeData, setExchangeData] = useState("");
-//   const [db,setdb] = useState();
 
 
   useEffect(() => {
