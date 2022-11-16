@@ -1,6 +1,8 @@
 import {React} from "react";
 
 import Pollution from "./pollution";
+import Covid from "./Covid";
+import OrderList from "./Production";
 
 import "../App.css";
 
@@ -28,11 +30,11 @@ const Main = () => {
                     <div id="product_order_profile">
                         <div>7</div>
                         <div> <Pollution /></div>
-                        <div>9</div>
+                        <div><Covid /></div>
                     </div>
 
                     <div id='static_revenue'>
-                        <div>10</div>
+                        <div><OrderList /></div>
                         <div>11</div>
                     </div>
 

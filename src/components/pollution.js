@@ -9,7 +9,7 @@ const Pollution = () => {
         <>
             <div id="pollution">
                 <div>
-                    <b>Order Status</b>
+                    <b>Environment</b>
                     <div id="order_tab"><p>Today's Performance</p>  <strong> <sup>▴</sup> 52%</strong></div>
                     <div id="range_area">
                         <div id="range_title"><p>82%</p><Button id='delivered' variant="contained">Industrial</Button><p>18%</p></div>
