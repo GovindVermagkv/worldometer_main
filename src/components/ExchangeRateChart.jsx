@@ -22,6 +22,8 @@ export default function ExchangeRateChart() {
     });
   }, []);
 
+
+  // Test
   const newData = [];
   Object.keys(exchangeData).forEach((ele) => {
     let temp = {};
