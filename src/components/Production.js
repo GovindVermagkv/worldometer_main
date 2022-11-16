@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import '../App.css'
 
 const OrderList = () => {
     const [mydata, setMydata] = useState([]);
+    const [error, seterror]=useState("");
+    const [showtoast,setshowtoast]=useState(false)
+
+
+
 
     useEffect(() => {
         axios
@@ -13,8 +20,15 @@ const OrderList = () => {
             )
             .then((response) => {
                 setMydata(response.data);
-                console.log(response.data);
-            });
+            })
+
+            .catch(function (error) {
+                seterror("Production data not loaded")
+                error && setshowtoast(true)
+              })
+
+
+
     }, []);
 
 
@@ -22,21 +36,31 @@ const OrderList = () => {
     return (
         <>
             <div id='production_container' >
-
+            <table>
+            <tr>
+                <th>Product</th>
+                <th>Pro. Name</th>
+                <th>Country</th>
+                <th>Pcs.</th>
+                <th>Price</th>
+                <th>Status</th>
+            </tr>
                 {mydata.map((value) =>
+                        <tr>
+                            <td><img src={value.product} alt="" /> </td>
+                            <td>{value.name}</td>
+                            <td><img src={value.country} alt="" /></td>
+                            <td>{value.Pcs}</td>
+                            <td>{value.price}</td>
+                            <td id={value.status}>{value.status}</td>
 
-                    <> 
-                        <div><img src={value.product} /> </div>
-                        <div>{value.name}</div>
-                        <div><img src={value.country} /></div>
-                        <div>{value.pcs}</div>
-                        <div>{value.$}</div>
-                        <div>{value.status}</div>
-
-                    </>
-
+                        </tr>
 
                 )}
+                </table>
+
+                {showtoast && toast(error) && <ToastContainer theme="dark" /> }
+
             </div>
         </>
     )

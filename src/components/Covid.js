@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Chart from "react-apexcharts";
 
@@ -7,6 +9,9 @@ import '../App.css'
 
 const Covid = () => {
   const [mydata, setMydata] = useState([]);
+  const [error, seterror]=useState("");
+  const [showtoast,setshowtoast]=useState(false)
+
 
   useEffect(() => {
     axios
@@ -15,13 +20,19 @@ const Covid = () => {
       )
       .then((response) => {
         setMydata(response.data);
+      })
+      .catch(function (error) {
+        seterror("Covid data not loaded")
+        error && setshowtoast(true)
       });
+
+        
+
   }, []);
 
   const world = [];
   const data = [];
   mydata.map((val) => {
-    // console.log(val);
     world.push(val.series);
     data.push(+val.value);
   });
@@ -49,6 +60,7 @@ const Covid = () => {
           },
         }}
       />
+      {showtoast && toast(error) && <ToastContainer theme="dark" /> }
     </div>
   );
 }

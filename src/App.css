@@ -1,13 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: ubuntu;
+  font-family: Quicksand;
 }
 
 /* --------------Layout----------- */
-#App_container {
+/* #App_container {
   background-color: aliceblue;
-}
+} */
 
 #layout_container {
   width: 100%;
@@ -15,18 +15,22 @@
 
 #header_container {
   width: 100%;
-  height: 100px;
+  height: 90px;
   background-color: #fff;
 }
 
 #main_container {
   width: 100%;
-  height: 60%;
+  height: 100vh;
+  overflow: scroll;
   border: 2px solid blue;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0px;
+  background-color: rgba(205, 236, 245, 0.34);
+}
+#main_container::-webkit-scrollbar {
+  display: none;
 }
 
 #footer_container {
@@ -45,7 +49,7 @@
 
 #header_container>div{
  width: 90%;
- height: 100px;
+ height: 80px;
  display: flex;
  align-items: center;
  justify-content: space-between;
@@ -58,8 +62,8 @@
   justify-content: center;
 }
 #head_img>img{
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height:60px;
   border-radius: 50%;
 }
 #input_area{
@@ -72,8 +76,19 @@
 #input_area>input{
   border-radius: 10px;
   outline: none;
-  border: 1px solid green;
+ background-color: rgb(224, 228, 235);
   padding: 10px;
+  border: none;
+  text-transform: capitalize;
+}
+#icon_email,#icon_bell{
+  background-color:rgb(224, 228, 235) ;
+  border-radius: 50%;
+  padding: 7px;
+}
+#icon_avtar{
+  background-color: rgb(26, 26, 222);
+  padding: 5px;
 }
 
 /* ---------------------Header---------------- */
@@ -91,8 +106,16 @@
 }
 #navbar_menu{
   width: 80%;
+  height: 100%;
+}
+#subicon2{
+  margin-right: 10px;
+  background-color: rgb(70, 107, 230);
+  padding: 2px ;
+  border-radius: 5px;
 }
 #navbar_menu>ul{
+  height: 100%;
   display: flex;
   justify-content: space-around;
 }
@@ -100,6 +123,8 @@
   list-style-type: none;
   font-size: 20px;
   color: white;
+  display: flex;
+  align-items: center;
 
 }
 
@@ -116,7 +141,6 @@
 #main_container>div {
   width: 97%;
   height: 98%;
-  border: 2px solid black;
 }
 
 #main_container>div>#dashboard {
@@ -130,15 +154,36 @@
 #main_container>div>#main_super_div {
   display: flex;
   width: 100%;
-  height: 60px;
+  height: 90px;
   justify-content: space-around;
   margin: 10px 0px;
 }
 
 #main_container>div>#main_super_div>div {
-  width: 24%;
-  height: 98%;
-  border: 1px solid green;
+  width: 22%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+}
+#subicon{
+  margin-left: 15px;
+  font-size: 30px;
+}
+#subicon_text{
+  margin-right: 10px;
+}
+#subicon_text>h3{
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+#main_container>div>#main_super_div>div:nth-child(even){
+background-color: rgba(0, 0, 255, 0.64);
+}
+#main_container>div>#main_super_div>div:nth-child(odd){
+background-color: rgba(255, 0, 0, 0.851);
 }
 
 #main_container>div>#static_revenue {
@@ -185,7 +230,7 @@
 
 #calander_world>div {
   width: 45%;
-  height: 97%;
+  height: 400px;
   border: 1px solid yellow;
 
 }
@@ -193,14 +238,14 @@
 #one {
   border: 1px solid red;
   width: 100%;
-  height: 20%;
+  height: 30%;
 
 }
 
 #two {
   border: 1px solid rgb(33, 14, 103);
   width: 100%;
-  height: 70%;
+  /* height: 79%; */
 }
 
 
@@ -213,9 +258,10 @@
 /* --------------pollution-------- */
 #pollution {
   width: 100%;
-  height: 350px;
+  height: 340px;
   display: flex;
   justify-content: center;
+  background-color: #fff;
 }
 
 #pollution>div {
@@ -264,7 +310,7 @@
   padding: 3px;
 }
 
-#shipped {
+#residential {
   background-color: rgb(41, 219, 41);
   font-size: 8px;
   padding: 3px;
@@ -348,7 +394,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-top: 7px;
+  background-color: #fff;
 }
 #piechart{
   width: 95%;
@@ -368,14 +414,78 @@
 #production_container{
   width: 100%;
   height: 100%;
+  background-color: #fff;
+}
+#production_container>table{
+  width: 100%;
+  height: 100%;
 }
 #production_container>table>tr{
-  height: 40px;
+  height: 16.5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid gray;
+ 
 }
-#production_container>table>tr>img{
-  width: 30px;
+#production_container>table>tr>td{
+  width: 20%;
+  margin-left: 15px;
+}
+#production_container>table>tr>th{
+  width: 20%;
+  text-align: left;
+  margin-left: 15px;
+ 
+}
+#production_container>table>tr>td>img{
+  width: 40px;
   height: 30px;
 }
-
+#shipped,#Shipped{
+  background-color: rgb(14, 222, 14);
+  color: white;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+#Delievered{
+  background-color: rgb(14, 52, 222);
+  color: white;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  width: 20px;
+}
+#Pending{
+  background-color:goldenrod;
+  color: white;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  width: 20px;
+}
 
 /* ----------------production---------- */
+
+/* -----------------calender ------- */
+#Calender_container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* #calender{
+  width: 100%;
+  height: 100%;
+} */
+
+
+
+
+
+/* -----------------calender ------- */
