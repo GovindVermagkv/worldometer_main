@@ -5,7 +5,9 @@ import {Linechart} from "./Linechart";
 import {Donutchart} from "./Donutchart";
 
 
+
 import "../App.css";
+import { OrderList } from "./OrderList";
 
 
 const Main = () => {
@@ -27,16 +29,17 @@ const Main = () => {
                     <div id='static_revenue'>
                        <div>5</div>
                         <div> <Linechart/> </div>
+                        {/* <div> </div> */}
                     </div>
 
                     <div id="product_order_profile">
                         <div><Donutchart/> </div>
-                        <div> <Pollution /></div>
-                        <div>9</div>
+                        <div><Pollution/> </div>
+                        <div> 9 </div>
                     </div>
 
                     <div id='static_revenue'>
-                        <div>10</div>
+                        <div> <OrderList/> </div>
                         <div>11</div>
                     </div>
 

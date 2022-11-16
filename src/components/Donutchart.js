@@ -18,7 +18,6 @@ export const Donutchart = () => {
   const country = [];
   const medal = [];
   mydata.map((value) => {
-    console.log(value);
     country.push(value.country);
     medal.push(+value.medals);
   });

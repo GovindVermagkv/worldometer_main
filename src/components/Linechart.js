@@ -20,7 +20,8 @@ export const Linechart = () => {
     obj.data = val.value;
     newArr.push(obj);
   });
-  console.log(newArr);
+
+  const months = [ "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",] ;
 
   return (
     <>
@@ -34,26 +35,13 @@ export const Linechart = () => {
           options={{
             title: { text: "Product sell in 2021" },
             xaxis: {
-              categories: [
-                "Jan",
-                "Feb",
-                "Mar",
-                "Apr",
-                "May",
-                "Jun",
-                "Jul",
-                "Aug",
-                "Sep",
-                "Oct",
-                "Nov",
-                "Dec",
-              ],
+              categories: months,
             },
             yaxis: {
               title: { text: "Product in K" },
             },
           }}
-        ></Chart>
+        />
       </div>
     </>
   );
