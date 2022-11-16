@@ -24,13 +24,15 @@ const Main = () => {
 
                     <div id='static_revenue'>
                         <div><PopulationChart /></div>
+                        <div>5 </div>
                         <div>6</div>
                     </div>
 
                     <div id="product_order_profile">
                         <div>7</div>
                         <div> <Pollution /></div>
-                        <div></div>
+                        <div>8</div>
+                        <div>9</div>
                     </div>
 
                     <div id='static_revenue'>
