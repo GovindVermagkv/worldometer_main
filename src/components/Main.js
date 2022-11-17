@@ -25,11 +25,11 @@ const Main = () => {
 
                     <div id='static_revenue'>
                         <div>5 </div>
-                        <div>6</div>
+                        <div><Linechart/></div>
                     </div>
 
                     <div id="product_order_profile">
-                        <div>7</div>
+                        <div><Donutchart/></div>
                         <div> <Pollution /></div>
                         <div>9</div>
                     </div>

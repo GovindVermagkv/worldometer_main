@@ -32,7 +32,6 @@ export const Linechart = () => {
   return (
     <>
       <div>
-        <h2>Line Chart- Using Apexcharts in React </h2>
         <Chart
           type="line"
           width={550}

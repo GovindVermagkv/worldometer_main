@@ -30,7 +30,6 @@ export const Donutchart = () => {
 
   return (
     <div>
-      <h2>Donut Chart of Olympics</h2>
       <Chart
         type="donut"
         width={430}
