@@ -4,14 +4,13 @@ import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import LoyaltyIcon from '@mui/icons-material/Loyalty';
 
-import Pollution from "./pollution";
-import Covid from "./Covid";
-import OrderList from "./Production";
-import Calender from "./Calender";
-import PopulationChart from "./PopulationChart";
-import ExchangeRateChart from "./ExchangeRateChart";
+import Pollution from "../Pollution/pollution";
+import Covid from "../Covid/Covid";
+import OrderList from "../Production/Production";
+import Calender from "../calender/Calender";
+// import Richest from "../RichestPerson/Richest"; 
 
-import "../App.css";
+import "../Main/Main.css";
 
 const Main = () => {
     return (
@@ -30,9 +29,8 @@ const Main = () => {
                     </div>
 
                     <div id='static_revenue'>
-                        <div><PopulationChart /></div>
+                        <div></div>
                         <div>5 </div>
-                        <div>6</div>
                     </div>
 
                     <div id="product_order_profile">
@@ -43,7 +41,7 @@ const Main = () => {
 
                     <div id='static_revenue'>
                         <div><OrderList /></div>
-                        <div>11</div>
+                        <div></div>
                     </div>
 
                     <div id="calander_world">

@@ -3,9 +3,9 @@ import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import '../App.css'
+import '../Production/Production.css'
 
-const OrderList = () => {
+const Richest = () => {
     const [mydata, setMydata] = useState([]);
     const [error, seterror]=useState("");
     const [showtoast,setshowtoast]=useState(false)
@@ -14,16 +14,16 @@ const OrderList = () => {
 
 
     useEffect(() => {
-        axios
-            .get(
-                `https://raw.githubusercontent.com/Prakash-kumar1/JSON/main/orderApi`
+        axios.get(
+                `https://raw.githubusercontent.com/Prakash-kumar1/JSON/main/RichApi`
             )
             .then((response) => {
-                setMydata(response.data);
+                setMydata(response.data)
+                console.log(response.data[0].series);
             })
 
             .catch(function (error) {
-                seterror("Production data not loaded")
+                seterror("Richest data not loaded")
                 error && setshowtoast(true)
               })
 
@@ -45,14 +45,14 @@ const OrderList = () => {
                 <th>Price</th>
                 <th>Status</th>
             </tr>
-                {mydata.map((value) =>
+                {mydata.map(({series,image,name,country,company,net_Worth}) =>
                         <tr>
-                            <td><img src={value.product} alt="" /> </td>
-                            <td>{value.name}</td>
-                            <td><img src={value.country} alt="" /></td>
-                            <td>{value.Pcs}</td>
-                            <td>{value.price}</td>
-                            <td id={value.status}>{value.status}</td>
+                            <td>{series} </td>
+                            <td><img src={image} alt="" /></td>
+                            <td>{name}</td>
+                            <td>{country}</td>
+                            <td>{company}</td>
+                            <td>{net_Worth}</td>
 
                         </tr>
 
@@ -66,4 +66,4 @@ const OrderList = () => {
     )
 }
 
-export default OrderList;
+export default Richest;

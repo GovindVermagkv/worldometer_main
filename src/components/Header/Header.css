@@ -1,0 +1,52 @@
+#header_container {
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+  }
+
+  
+#header_container>div{
+    width: 90%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+   #head_img{
+     height: 100%;
+     width: 10%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   #head_img>img{
+     width: 60px;
+     height:60px;
+     border-radius: 50%;
+   }
+   #input_area{
+     width: 30%;
+     height: 100%;
+     align-items: center;
+     display: flex;
+     justify-content: space-around;
+   }
+   #input_area>input{
+     border-radius: 10px;
+     width: 50%;
+     outline: none;
+    background-color: rgb(224, 228, 235);
+     padding: 10px;
+     border: none;
+     text-transform: capitalize;
+   }
+   #icon_email,#icon_bell{
+     background-color:rgb(224, 228, 235) ;
+     border-radius: 50%;
+     padding: 7px;
+   }
+   #icon_avtar{
+     background-color: rgb(26, 26, 222);
+     padding: 5px;
+   }
+   

@@ -1,7 +1,7 @@
 import {React} from "react";
 import { Button } from '@mui/material';
 
-import "../App.css";
+import "../Pollution/Pollution.css";
 
 const Pollution = () => {
     return (
@@ -19,7 +19,7 @@ const Pollution = () => {
                         <div id="range_box"><div id="positive2"></div><div id="negetive2"></div> </div>
                     </div>
                     <div id="range_area">
-                        <div id="range_title"><p>30%</p><Button id='pending' variant="contained">pending</Button><p>70%</p></div>
+                        <div id="range_title"><p>30%</p><Button id='pending' variant="contained">vehiculer</Button><p>70%</p></div>
                         <div id="range_box"><div id="positive3"></div><div id="negetive3"></div> </div>
                     </div>
                     <div id="alert_color"><p id="alert_text1">Pollution</p><p id="alert_text2">Fresh</p></div>

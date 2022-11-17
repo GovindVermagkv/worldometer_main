@@ -3,10 +3,10 @@ import { Avatar } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
-import logo from './assets/logo.jpg'
-import Navbar from "./Navbar";
+import logo from '../assets/logo.jpg'
+import Navbar from "../Navbar/Navbar";
 
-import "../App.css";
+import "../Header/Header.css";
 
 
 const Header = () => {

@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import Chart from "react-apexcharts";
 
-import '../App.css'
+import '../Covid/Covid.css'
 
 const Covid = () => {
   const [mydata, setMydata] = useState([]);

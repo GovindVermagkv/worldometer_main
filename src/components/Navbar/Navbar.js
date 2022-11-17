@@ -5,7 +5,7 @@ import BrandingWatermarkIcon from '@mui/icons-material/BrandingWatermark';
 import PaymentsIcon from '@mui/icons-material/Payments';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 
-import '../App.css';
+import '../Navbar/Navbar.css';
 
 const Navbar = () => {
     return (
