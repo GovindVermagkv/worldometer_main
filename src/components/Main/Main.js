@@ -8,7 +8,7 @@ import Pollution from "../Pollution/pollution";
 import Covid from "../Covid/Covid";
 import OrderList from "../Production/Production";
 import Calender from "../calender/Calender";
-// import Richest from "../RichestPerson/Richest"; 
+import Footer from "../Footer/Footer"
 
 import "../Main/Main.css";
 
@@ -22,10 +22,10 @@ const Main = () => {
                     </div>
 
                     <div id="main_super_div">
-                        <div> <DonutSmallIcon  id='subicon'/> <div id='subicon_text'><h3>18090</h3><p>Visit Today</p></div></div>
-                        <div> <GroupAddIcon    id='subicon'/> <div id='subicon_text'><h3>526</h3><p>New User</p></div></div>
-                        <div> <BorderColorIcon id='subicon'/> <div id='subicon_text'><h3>7514</h3><p>New Order</p></div></div>
-                        <div> <LoyaltyIcon     id='subicon'/> <div id='subicon_text'><h3>$35342</h3><p>Total Sales</p></div></div>
+                        <div> <DonutSmallIcon id='subicon' /> <div id='subicon_text'><h3>18090</h3><p>Visit Today</p></div></div>
+                        <div> <GroupAddIcon id='subicon' /> <div id='subicon_text'><h3>526</h3><p>New User</p></div></div>
+                        <div> <BorderColorIcon id='subicon' /> <div id='subicon_text'><h3>7514</h3><p>New Order</p></div></div>
+                        <div> <LoyaltyIcon id='subicon' /> <div id='subicon_text'><h3>$35342</h3><p>Total Sales</p></div></div>
                     </div>
 
                     <div id='static_revenue'>
@@ -53,8 +53,9 @@ const Main = () => {
                     </div>
 
                 </div>
-
             </div>
+            <Footer />
+
         </>
     )
 }

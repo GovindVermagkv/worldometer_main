@@ -11,7 +11,7 @@ const Pollution = () => {
                     <b>Environment</b>
                     <div id="order_tab"><p>Today's Performance</p>  <strong> <sup>▴</sup> 52%</strong></div>
                     <div id="range_area">
-                        <div id="range_title"><p>82%</p><Button id='delivered' variant="contained">Industrial</Button><p>18%</p></div>
+                        <div id="range_title"><p>82%</p><Button id='industrial' variant="contained">Industrial</Button><p>18%</p></div>
                         <div id="range_box"><div id="positive1"></div><div id="negetive1"></div> </div>
                     </div>
                     <div id="range_area">
