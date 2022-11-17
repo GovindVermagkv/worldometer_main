@@ -4,11 +4,8 @@ import Pollution from "./pollution";
 import {Linechart} from "./Linechart";
 import {Donutchart} from "./Donutchart";
 
-
-
 import "../App.css";
-
-
+import { Quotes } from "./Quotes";
 
 const Main = () => {
     return (
@@ -44,7 +41,7 @@ const Main = () => {
 
                     <div id="calander_world">
                         <div id="side_div">
-                            <div id="one">12</div>
+                            <div id="one"> <Quotes/> </div>
                             <div id="two">13</div>
                         </div>
                         <div>14</div>

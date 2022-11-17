@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 
 export const Donutchart = () => {
   const [mydata, setMydata] = useState([]);
+  const notify = () => toast("Error 404 not found DonutChart !!");
 
   useEffect(() => {
     axios
@@ -12,7 +15,9 @@ export const Donutchart = () => {
       )
       .then((response) => {
         setMydata(response.data);
-      });
+      })
+      .catch(()=>{
+        {notify()} }) 
   }, []);
 
   const country = [];
@@ -58,6 +63,7 @@ export const Donutchart = () => {
           },
         }}
       />
+      <ToastContainer /> 
     </div>
   );
 }
