@@ -4,6 +4,7 @@ import Pollution from "../Pollution/pollution";
 import Population from "../Population/Population"
 import RichestPerson from "../RichestPerson/RichestPerson"
 import WorldMap from "../Worldmap/WorldMap";
+import Converter from "../ExchangeRate/Converter"
 
 const Main = () => {
     return (
@@ -40,7 +41,7 @@ const Main = () => {
                     <div id="calander_world">
                         <div id="side_div">
                             <div id="one">12</div>
-                            <div id="two">13</div>
+                            <div id="two"><Converter /></div>
                         </div>
                         <div><WorldMap/></div>
                     </div>
