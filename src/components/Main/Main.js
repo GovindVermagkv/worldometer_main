@@ -8,10 +8,14 @@ import Pollution from "../Pollution/pollution";
 import Covid from "../Covid/Covid";
 import OrderList from "../Production/Production";
 import Calender from "../calender/Calender";
-import Footer from "../Footer/Footer" ;
+import Footer from "../Footer/Footer"
 import {Donutchart} from "../Donut/Donutchart" ;
+import {Linechart} from "../Line/Linechart" ;
 import { Quotes } from "../Quote/Quotes";
-import { Linechart } from "../Line/Linechart";
+import Population from "../Population/Population" ;
+import RichestPerson from "../RichestPerson/RichestPerson" ;
+import WorldMap from "../Worldmap/WorldMap";
+
 import "../Main/Main.css";
 
 const Main = () => {
@@ -31,7 +35,7 @@ const Main = () => {
                     </div>
 
                     <div id='static_revenue'>
-                        <div></div>
+                        <div><Population /></div>
                         <div><Linechart/> </div>
                     </div>
 
@@ -43,7 +47,7 @@ const Main = () => {
 
                     <div id='static_revenue'>
                         <div><OrderList /></div>
-                        <div></div>
+                        <div><RichestPerson /></div>
                     </div>
 
                     <div id="calander_world">
@@ -51,7 +55,7 @@ const Main = () => {
                             <div id="one"><Quotes/></div>
                             <div id="two"><Calender /></div>
                         </div>
-                        <div>14</div>
+                        <div><WorldMap /></div>
                     </div>
 
                 </div>

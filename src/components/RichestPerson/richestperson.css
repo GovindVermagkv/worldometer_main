@@ -1,0 +1,19 @@
+.person_data_container{
+    padding: 10px;
+}
+.person_data_container h2{
+    text-align: center;
+    padding: 10px;
+}
+.person_data_container table{
+    text-align: center;
+}
+.person_data_container tr,th,td{
+    padding: 5px;
+}
+
+.person_data_container img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}

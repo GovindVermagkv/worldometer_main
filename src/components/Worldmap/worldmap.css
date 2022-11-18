@@ -1,0 +1,11 @@
+
+  .map svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+
+
+  .map path {
+    fill:#2556c2;
+  }
