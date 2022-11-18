@@ -48,8 +48,7 @@ const RichestPerson = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((value) => {
-              const { rank, image, name, country, source, finalWorth } = value;
+            {data.map(({ rank, image, name, country, source, finalWorth }) => {
               return (
                 <tr>
                   <td>

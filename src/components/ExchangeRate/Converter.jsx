@@ -21,9 +21,7 @@ export const Converter = () => {
       axios
         .get(`https://open.er-api.com/v6/latest/${base}`)
         .then((responce) => {
-          console.log(responce.data);
           const result = (responce.data.rates[convertTo] * amount).toFixed(3);
-          // console.log(result)
           setInitialState({
             ...initialState,
             result,
