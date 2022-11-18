@@ -24,7 +24,7 @@ const Main = () => {
                     </div>
 
                     <div id='static_revenue'>
-                        <div>5 </div>
+                        <div> 5 </div>
                         <div><Linechart/></div>
                     </div>
 
