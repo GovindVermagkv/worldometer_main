@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Chart from 'react-apexcharts'
+import Chart from 'react-apexcharts';
+
+import './Population.css'
 
 const Population = ()=>{
 
@@ -49,7 +51,10 @@ const Population = ()=>{
       },[])
 
       return (
-        <Chart options={options} series={series} type="bar" width={500} height={500} />
+        <div id='population_container'>
+          <Chart options={options} series={series} type="bar" id='chart_population'/>
+        </div>
+        
       )
 }
 
