@@ -21,6 +21,7 @@ export const Quotes = ()=> {
       getQuote() ;
     }, []) ;
 
+
   return (
     <>
         <div>
@@ -35,4 +36,6 @@ export const Quotes = ()=> {
     </>
   )
 }
+
+
 
