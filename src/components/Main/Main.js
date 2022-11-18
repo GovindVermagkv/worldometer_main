@@ -41,7 +41,7 @@ const Main = () => {
 
                     <div id='static_revenue'>
                         <div><OrderList /></div>
-                        <div></div>
+                        <div>R</div>
                     </div>
 
                     <div id="calander_world">
