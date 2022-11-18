@@ -9,6 +9,11 @@ import Covid from "../Covid/Covid";
 import OrderList from "../Production/Production";
 import Calender from "../calender/Calender";
 import Footer from "../Footer/Footer"
+import RichestPerson from "../RichestPerson/RichestPerson"
+import Population from "../Population/Population"
+import WorldMap from "../Worldmap/WorldMap"
+import Converter from "../ExchangeRate/Converter"
+
 
 import "../Main/Main.css";
 
@@ -29,8 +34,8 @@ const Main = () => {
                     </div>
 
                     <div id='static_revenue'>
+                        <div><Population /></div>
                         <div></div>
-                        <div>5 </div>
                     </div>
 
                     <div id="product_order_profile">
@@ -41,7 +46,7 @@ const Main = () => {
 
                     <div id='static_revenue'>
                         <div><OrderList /></div>
-                        <div></div>
+                        <div><RichestPerson /></div>
                     </div>
 
                     <div id="calander_world">
@@ -49,7 +54,7 @@ const Main = () => {
                             <div id="one">12</div>
                             <div id="two"><Calender /></div>
                         </div>
-                        <div>14</div>
+                        <div><WorldMap /></div>
                     </div>
 
                 </div>

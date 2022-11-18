@@ -1,0 +1,10 @@
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: #eee;
+    width: 350px;
+    height: 350px;
+}
