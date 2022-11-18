@@ -1,0 +1,9 @@
+#Calender_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .react-calendar{
+    width: 100%;
+  }
