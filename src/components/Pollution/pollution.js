@@ -2,7 +2,6 @@ import {React} from "react";
 
 import { Button } from '@mui/material';
 
-import "../App.css";
 
 const Pollution = () => {
     return (

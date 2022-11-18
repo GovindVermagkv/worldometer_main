@@ -1,10 +1,9 @@
 import {React} from "react";
 
-import Pollution from "./pollution";
-import PopulationChart from "./PopulationChart";
-import ExchangeRateChart from "./ExchangeRateChart";
-
-import "../App.css";
+import Pollution from "../Pollution/pollution";
+import Population from "../Population/Population"
+import RichestPerson from "../RichestPerson/RichestPerson"
+import WorldMap from "../Worldmap/WorldMap";
 
 const Main = () => {
     return (
@@ -23,21 +22,19 @@ const Main = () => {
                     </div>
 
                     <div id='static_revenue'>
-                        <div><PopulationChart /></div>
-                        <div>5 </div>
+                        <div><Population/></div>
                         <div>6</div>
                     </div>
 
                     <div id="product_order_profile">
                         <div>7</div>
                         <div> <Pollution /></div>
-                        <div>8</div>
                         <div>9</div>
                     </div>
 
                     <div id='static_revenue'>
                         <div>10</div>
-                        <div>11</div>
+                        <div><RichestPerson /></div>
                     </div>
 
                     <div id="calander_world">
@@ -45,7 +42,7 @@ const Main = () => {
                             <div id="one">12</div>
                             <div id="two">13</div>
                         </div>
-                        <div>14</div>
+                        <div><WorldMap/></div>
                     </div>
 
                 </div>
