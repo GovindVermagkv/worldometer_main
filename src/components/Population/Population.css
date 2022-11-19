@@ -1,0 +1,14 @@
+#population_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+#chart_population{
+    width: 100%;
+    height: 70%;
+    background-color: #fff;
+}
