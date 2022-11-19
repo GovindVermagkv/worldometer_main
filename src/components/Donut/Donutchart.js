@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Chart from "react-apexcharts";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { React, useState, useEffect } from "react";
 import axios from "axios";
+import Chart from "react-apexcharts";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Donutchart = () => {
   const [mydata, setMydata] = useState([]);
@@ -16,8 +16,11 @@ export const Donutchart = () => {
       .then((response) => {
         setMydata(response.data);
       })
-      .catch(()=>{
-        {notify()} }) 
+      .catch(() => {
+        {
+          notify();
+        }
+      });
   }, []);
 
   const country = [];
@@ -26,7 +29,6 @@ export const Donutchart = () => {
     country.push(value.country);
     medal.push(+value.medals);
   });
-
 
   return (
     <div>
@@ -62,9 +64,7 @@ export const Donutchart = () => {
           },
         }}
       />
-      <ToastContainer /> 
+      <ToastContainer />
     </div>
   );
-}
-
-
+};
