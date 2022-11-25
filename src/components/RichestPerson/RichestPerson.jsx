@@ -52,7 +52,7 @@ const RichestPerson = () => {
               return (
                 <tr>
                   <td>
-                    <img src={image} />
+                    <img src={image} alt='' />
                   </td>
                   <td>
                     <p>{rank}</p>
