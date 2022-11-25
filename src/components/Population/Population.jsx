@@ -36,7 +36,16 @@ const Population = ()=>{
           })
           setOptions({
             chart: {
-              id: 'apexchart-example'
+              id: 'population-chart'
+            },
+            dataLabels: {
+              enabled: false
+            },
+            plotOptions: {
+              bar: {
+                borderRadius: 4,
+                horizontal: false,
+              }
             },
             xaxis: {
               categories: country
