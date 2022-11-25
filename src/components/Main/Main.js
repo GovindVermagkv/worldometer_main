@@ -12,7 +12,6 @@ import Footer from "../Footer/Footer"
 import RichestPerson from "../RichestPerson/RichestPerson"
 import Population from "../Population/Population"
 import WorldMap from "../Worldmap/WorldMap"
-import Converter from "../ExchangeRate/Converter"
 
 
 import "../Main/Main.css";
