@@ -27,7 +27,7 @@ export const Linechart = () => {
     newArr.push(obj);
   });
 
-  const months = [ "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",] ;
+  const years = ["2015","2016","2017","2018","2019","2020","2021"] ;
 
   return (
     <>
@@ -38,12 +38,12 @@ export const Linechart = () => {
           height={450}
           series={newArr}
           options={{
-            title: { text: "Product sell in 2021" },
+            title: { text: "Top 5 Countries GDP from 2015 - 2021" },
             xaxis: {
-              categories: months,
+              categories: years,
             },
             yaxis: {
-              title: { text: "Product in K" },
+              title: { text: "GDP Growth" },
             },
           }}
         />

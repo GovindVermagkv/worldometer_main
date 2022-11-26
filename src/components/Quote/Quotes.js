@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react' ;
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './quotes.css'
 
 export const Quotes = ()=> {
     const [quotes , setQuotes] = useState("") ;
@@ -24,14 +25,12 @@ export const Quotes = ()=> {
 
   return (
     <>
-        <div>
-          <p>{quotes.text}</p>
-          <p>{quotes.author}</p>
-          <div>
+        <div className='quotes_container'>
+          <p className='quote'> <span>"</span> {quotes.text} <span>"</span></p>
+          <p className='author'>{quotes.author}</p>
 
-        <button onClick={getQuote}>change</button>
-          </div>
         </div>
+        <button className='quotes-btn' onClick={getQuote}>Next</button>
         <ToastContainer /> 
     </>
   )

@@ -8,6 +8,8 @@ import Main from "./components/Main/Main";
 import Register from "./components/Credential/ragister"
 import ErrorPage from "./components/Errorpage/Error";
 
+import About from "./components/About/About";
+
 import './App.css'
 
 export default function App() {
@@ -19,6 +21,8 @@ export default function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="*" element={<ErrorPage />} />
+
+          <Route path="about" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>

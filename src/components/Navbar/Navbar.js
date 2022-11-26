@@ -17,7 +17,7 @@ const Navbar = () => {
                         <li><Link to='/' id="dashboard"><DashboardIcon id="subicon2" /> Dashboard</Link></li>
                         <li><Link to='/' id="calender_nav"><CalendarMonthIcon id="subicon2" /> Calander </Link></li>
                         <li><Link to='/' id="user_interface"><BrandingWatermarkIcon id="subicon2" /> User Interface </Link></li>
-                        <li><Link to='/' id="components"><PaymentsIcon id="subicon2" /> Componants </Link></li>
+                        <li><Link to='/about' id="components"><PaymentsIcon id="subicon2" /> About </Link></li>
                         <li><Link to='/' id="pages"><AutoStoriesIcon id="subicon2" /> Pages </Link></li>
                     </ul>
                 </div>

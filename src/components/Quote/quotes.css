@@ -1,0 +1,31 @@
+.quotes_container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.quotes-btn{
+    padding: 8px 18px;
+    color: white;
+    background: blue;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.author{
+    text-align: right;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.quote{
+    height: 50px;
+    font-style: italic;
+}
+
+.quote span{
+    font-weight: bolder;
+}
