@@ -56,10 +56,10 @@ export const Converter = () => {
             {amount}
             {base} is equvalent to
           </h5>
-          <h3>
+          <h2>
             {amount === "" ? "0" : result === null ? "Calculating...." : result}
             {convertTo}
-          </h3>
+          </h2>
         </div>
         <div>
             <form>

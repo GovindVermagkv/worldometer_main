@@ -61,6 +61,7 @@ const Population = ()=>{
 
       return (
         <div id='population_container'>
+          <h2>Top 10 Countries with Population</h2>
           <Chart options={options} series={series} type="bar" id='chart_population'/>
         </div>
         
