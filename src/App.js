@@ -7,6 +7,9 @@ import Header from "./components/Header/Header"
 import Main from "./components/Main/Main";
 import Register from "./components/Credential/ragister"
 import ErrorPage from "./components/Errorpage/Error";
+import Profile from "./components/Profile/Profile"
+
+import Converter from "./components/ExchangeRate/Converter"
 
 import './App.css'
 
@@ -19,6 +22,10 @@ export default function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="*" element={<ErrorPage />} />
+          <Route path="profile" element={<Profile />} />
+
+          <Route path="currency" element={<Converter />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
