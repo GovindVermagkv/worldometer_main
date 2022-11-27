@@ -11,6 +11,8 @@ import Profile from "./components/Profile/Profile"
 
 import Converter from "./components/ExchangeRate/Converter"
 
+import About from "./components/About/About";
+
 import './App.css'
 
 export default function App() {
@@ -23,9 +25,8 @@ export default function App() {
           <Route path="register" element={<Register />} />
           <Route path="*" element={<ErrorPage />} />
           <Route path="profile" element={<Profile />} />
-
           <Route path="currency" element={<Converter />} />
-
+            <Route path="about" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>

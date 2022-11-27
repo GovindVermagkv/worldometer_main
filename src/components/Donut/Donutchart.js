@@ -11,7 +11,7 @@ export const Donutchart = () => {
   useEffect(() => {
     axios
       .get(
-        `https://raw.githubusercontent.com/Prakash-kumar1/JSON/main/testModel`
+        `https://raw.githubusercontent.com/Prakash-kumar1/JSON/main/modeldata`
       )
       .then((response) => {
         setMydata(response.data);

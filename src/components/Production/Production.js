@@ -45,12 +45,12 @@ const OrderList = () => {
                 <th>Price</th>
                 <th>Status</th>
             </tr>
-                {mydata.map(({product,country,name,Pcs,price,status}) =>
+                {mydata.map(({product,country,name,Prod,price,status}) =>
                         <tr>
                             <td><img src={product} alt="" /> </td>
                             <td>{name}</td>
                             <td><img src={country} alt="" /></td>
-                            <td>{Pcs}</td>
+                            <td>{Prod}</td>
                             <td>{price}</td>
                             <td id={status}>{status}</td>
 
