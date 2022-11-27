@@ -15,7 +15,7 @@ export default function Prakash() {
                     <p className="card-description">front-end developer</p>
                     <div className="card-button">
                         <button className="btn btn-primary"><a href="https://github.com/Prakash-kumar1">Github</a></button>
-                        <button className="btn btn-outline-primary">LinkedIn</button>
+                        <button className="btn btn-outline-primary"><a href="https://www.linkedin.com/in/prakash-kumar-386706242/">LinkedIn</a></button>
                     </div>
                     <ul className="card-social">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>

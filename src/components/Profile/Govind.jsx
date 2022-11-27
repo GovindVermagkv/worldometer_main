@@ -15,7 +15,7 @@ export default function Govind() {
                     <p className="card-description">front-end developer</p>
                     <div className="card-button">
                         <button className="btn btn-primary"><a href='https://github.com/GovindVermagkv'>Github</a></button>
-                        <button className="btn btn-outline-primary">LinkedIn</button>
+                        <button className="btn btn-outline-primary"><a href="https://www.linkedin.com/in/govind-verma-b210bb19b/">LinkedIn</a></button>
                     </div>
                     <ul className="card-social">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
