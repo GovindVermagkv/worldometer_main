@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+import Navbar from './components/Navbar/Navbar'
+import Login from "./components/Credential/Login";
+import Header from "./components/Header/Header"
+import Main from "./components/Main/Main";
+import Register from "./components/Credential/ragister"
+import ErrorPage from "./components/Errorpage/Error";
+import Profile from "./components/Profile/Profile"
+
+import Converter from "./components/ExchangeRate/Converter"
+
+import About from "./components/About/About";
+
+import './App.css'
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Header />}>
+          <Route index element={<Main />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="*" element={<ErrorPage />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="currency" element={<Converter />} />
+            <Route path="about" element={<About />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
